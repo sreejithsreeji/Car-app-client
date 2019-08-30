@@ -1,0 +1,17 @@
+.Sort-options {
+  
+    min-height: 5vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px
+
+  
+  }
+
+  .Sort-title{
+      padding: 6px;
+      margin: 6px;
+      font-weight: bold
+  }
