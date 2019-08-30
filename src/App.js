@@ -20,7 +20,7 @@ class App extends Component{
   }
 
   componentDidMount(){
-      axios.get('http://localhost:5000/api/v1/cars')
+      axios.get('http://localhost:3000/api/v1/cars')
       .then(response=>{
         this.setState({cars:response.data.results,loaded:1})
       })
@@ -86,7 +86,7 @@ class App extends Component{
 
   maxPageChanged=(e)=>{
     this.setState({maxPerPage:e.target.value});
-    let url='http://localhost:5000/api/v1/cars/sort-by?'
+    let url='http://localhost:3000/api/v1/cars/sort-by?'
     setTimeout(()=>{
       this.getData(url+`&limit=${this.state.maxPerPage}`)
     },3000)
@@ -120,7 +120,7 @@ class App extends Component{
 
 
   urlMaker=(sortOptions)=>{
-    let url='http://localhost:5000/api/v1/cars/sort-by?';
+    let url='http://localhost:3000/api/v1/cars/sort-by?';
     for(let i=0;i<this.state.sortOptions.length;i++){
       console.log(sortOptions[i])
       url=url+`k${i+1}=${sortOptions[i]}&`
